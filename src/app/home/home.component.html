@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row my-2">
+    <button class="btn btn-info mx-2" (click)="fetchData()">Fetch</button>
+    <button class="btn btn-success mx-2" (click)="createData()">Create</button>
+    <button class="btn btn-primary mx-2" (click)="updateData()">Update</button>
+    <button class="btn btn-danger mx-2" (click)="deleteData()">Delete</button>
+  </div>
+  <div>
+    {{responseData | json}}
+  </div>
+</div>
