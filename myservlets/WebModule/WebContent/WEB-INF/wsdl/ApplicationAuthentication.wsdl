@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://ws.applicationauthen.utcourts.gov" xmlns:impl="http://ws.applicationauthen.utcourts.gov" xmlns:intf="http://ws.applicationauthen.utcourts.gov" xmlns:tns2="http://applicationauthen.utcourts.gov" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema targetNamespace="http://ws.applicationauthen.utcourts.gov" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://applicationauthen.utcourts.gov"/>
+   <element name="validateResponse">
+    <complexType>
+     <sequence>
+      <element name="validateReturn" nillable="true" type="tns2:ReturnCode"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="validate">
+    <complexType>
+     <sequence>
+      <element name="requestedSystem" nillable="true" type="xsd:string"/>
+      <element name="callingSystem" nillable="true" type="xsd:string"/>
+      <element name="key" nillable="true" type="xsd:string"/>
+      <element name="transactionId" nillable="true" type="xsd:string"/>
+      <element name="transactionKey" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema targetNamespace="http://applicationauthen.utcourts.gov" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="ReturnCode">
+    <sequence>
+     <element name="reason" nillable="true" type="xsd:string"/>
+     <element name="reasonCode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="validateResponse">
+     <wsdl:part element="intf:validateResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="validateRequest">
+     <wsdl:part element="intf:validate" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="ApplicationAuthentication">
+     <wsdl:operation name="validate">
+       <wsdl:input message="intf:validateRequest" name="validateRequest"/>
+
+       <wsdl:output message="intf:validateResponse" name="validateResponse"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="ApplicationAuthenticationSoapBinding" type="intf:ApplicationAuthentication">
+ <wsaw:UsingAddressing wsdl:required="false" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="validate">
+       <wsdlsoap:operation soapAction="validate"/>
+
+       <wsdl:input name="validateRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="validateResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="ApplicationAuthenticationService">
+     <wsdl:port binding="intf:ApplicationAuthenticationSoapBinding" name="ApplicationAuthentication">
+       <wsdlsoap:address location="https://localhost:9443/ApplicationAuthenWS/services/ApplicationAuthentication"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

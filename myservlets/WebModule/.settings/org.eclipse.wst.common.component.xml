@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CorisWEB">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="CorisCommon.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CorisCommon/CorisCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CorisInterface.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CorisInterface/CorisInterface">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommonAuth.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CommonAuth/CommonAuth">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CareCommon.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/CareCommon/CareCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PersonnelCommon.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PersonnelCommon/PersonnelCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ProblemSolvingCommon.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ProblemSolvingCommon/ProblemSolvingCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="PersonCentralCommon.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/PersonCentralCommon/PersonCentralCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="CorisWEB"/>
+        <property name="java-output-path" value="/CorisWEB/WebContent/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<PROPERTY>
+	<use_jdbc>TRUE</use_jdbc>
+	<max_results>
+		100
+	</max_results>
+	<max_results_message>
+		Too many results have been returned. Please narrow your search.
+	</max_results_message>
+	<no_results_message>
+		No results found.
+	</no_results_message>
+	<system>TEST</system>
+	<data_sources>
+		<informix>
+			<username>dmuser</username>
+			<password>documents!</password>
+			<datasource>jdbc/docMgrUpdate</datasource>
+			<JDBCURL>jdbc:informix-sqli://192.168.4.90:1163/docmgr:informixserver=docmgrtst</JDBCURL>
+		</informix>
+		<district_ds>
+			<datasource>jdbc/jupiter</datasource>
+			<username>xxxxxx</username>
+			<password>xxxxxx</password>
+			<JDBCURL>jdbc:informix-sqli://test-slc-dist-ifmx01:1524/coris:INFORMIXSERVER=jctst_coris</JDBCURL>
+		</district_ds>
+		<justice_ds>
+			<datasource>jdbc/justice</datasource>
+			<username>xxxxxx</username>
+			<password>xxxxxx</password>
+			<JDBCURL>jdbc:informix-sqli://test-slc-just-ifmx01:1524/coris:INFORMIXSERVER=jctst2_coris</JDBCURL>
+		</justice_ds>
+	</data_sources>
+	
+	<security>
+		<request><type>CaseInfo,Document</type></request>
+		<system><info>Tybera,Coris,XChange</info></system>
+		<court><type>District,Justice</type></court>
+		<requestor><type>Clerk,Judge,Attorney,Individual</type></requestor>
+		<reference><system>retrieveCORISDocumentWS</system></reference>
+	</security>
+	
+	<file_system_new>
+		<server_name>testdocmgr</server_name>
+	</file_system_new>
+		
+	<file_system_old>
+		<server_name>doctest</server_name>
+	</file_system_old>
+	
+	<file_system_new_user>
+		docfile
+	</file_system_new_user>
+		
+	<file_system_old_user>
+		docfile
+	</file_system_old_user>
+	
+	
+	<secure><coris><endpoint>http://localhost:9080/SecureCORISDataWS/services/SecureCORISData</endpoint></coris></secure>
+	<send><document><endpoint>http://localhost:9080/SendCORISDocumentWS/services/SendCORISDocument</endpoint></document></send>
+	<case><info><endpoint>http://wstest.utcourts.gov:9080/CaseHist/services/CaseHistoryServiceSOAP</endpoint></info></case>
+	
+	<scripts_dist>
+		<username>xchjava</username>
+		<hostName>test-slc-dist-scripts01</hostName>
+		<corisUserId>66821</corisUserId>
+	</scripts_dist>
+	<scripts_just>
+		<username>xchjava</username>
+		<hostName>test-slc-just-scripts01</hostName>
+		<corisUserId>121873</corisUserId>
+	</scripts_just>
+	<ssh>
+		<timeout>
+			<use>Y</use>
+			<seconds>180</seconds>
+		</timeout>
+	</ssh>
+	<web_services>
+		<applicationauth_ws>
+			<endpoint>https://dev-slc-apps-ws01.utahcourts.local:9443/CourtsSecureListenerNoHttp/soaphttpengine/devbus/ApplicationAuthenWSInboundService/inPort</endpoint>
+			<application_key>9Ojdh@JKL8)SSP98jn2uG@!98</application_key>
+		</applicationauth_ws>
+	</web_services>
+	<logging>
+		<toString>1</toString>  <!-- RUN = 1, PRINT = 2, NO_PRINT = 4...        e.g. RUN + PRINT = 3, RUN + NO_PRINT = 5  -->
+	</logging>
+	<system_name>CORIS</system_name>
+	<system_id>31</system_id>
+	<system_version>1</system_version>
+	<return_email>courts@utcourts.gov</return_email>
+	<osdc>
+		<servername>172.16.0.80</servername>
+		<username>corisftp</username>
+		<password>6]^OPe9f%C4HBc</password>
+		<osdc_ftp_directory>data/dev/debt_collection</osdc_ftp_directory>
+	</osdc>
+	<transactionkey_ws_endpoint>https://dev-slc-apps-ws01.utahcourts.local:9443/CourtsSecureListenerNoHttp/soaphttpengine/devbus/TransactionKeyWSInboundService/inPort</transactionkey_ws_endpoint>
+	<docdirect>
+		<url>https://devws.utcourts.gov/DocDirectWEB/ShowDocServlet</url>
+		<app_auth_ws_key>9T!nR6@wQ!7Rx5@41eW@rbc2</app_auth_ws_key>
+		<docmgruser>corisaccess</docmgruser>
+	</docdirect>
+	<server>
+	    <env>DEV</env>
+	</server>
+	<calendar>
+		<use_jdbc>TRUE</use_jdbc>
+		<system>DEV</system>
+		<save_file_path>tmp</save_file_path>
+		<days_to_display>30</days_to_display>
+		<ftp>			
+			<webCal_sftp>
+				<sftp_host>172.16.0.80</sftp_host>
+				<sftp_username>corisftp</sftp_username>
+				<sftp_port>22</sftp_port>
+				<sftp_password>6]^OPe9f%C4HBc</sftp_password>
+				<sftp_remote_dir>/opt/ftp/corisftp/data/web_cal/dev</sftp_remote_dir>
+			</webCal_sftp>
+		</ftp>	
+   </calendar>	
+</PROPERTY>

@@ -1,0 +1,12 @@
+#Mon Nov 19 13:53:05 MST 2018
+override=true
+USER_MANUAL_PREFERENCE=enabledManualValidatorList
+vals/com.ibm.etools.javaee.core.ProjectStructureValidator/global=FF01
+vals/com.ibm.etools.j2ee.migration.ObsoleteValidator/global=FF01
+suspend=false
+vals/com.ibm.etools.javaee.core.DynamicManifestValidator/global=FF01
+eclipse.preferences.version=1
+vf.version=3
+DELEGATES_PREFERENCE=delegateValidatorList
+USER_PREFERENCE=overrideGlobalPreferencestruedisableAllValidationfalseversion1.2.251.v201208301900
+USER_BUILD_PREFERENCE=enabledBuildValidatorList

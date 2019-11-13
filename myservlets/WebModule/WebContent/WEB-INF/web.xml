@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+	 <!-- define global error handler -->
+    <error-page>
+        <location>/error-handler</location>
+    </error-page>
+	<display-name>CorisWEB</display-name>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<service-ref>
+		<description>
+		WSDL Service TransactionKeyService</description>
+		<service-ref-name>service/TransactionKeyService</service-ref-name>
+		<service-interface>gov.utcourts.transactionkey.ws.TransactionKeyService</service-interface>
+		<wsdl-file>WEB-INF/wsdl/TransactionKey.wsdl</wsdl-file>
+		<jaxrpc-mapping-file>WEB-INF/TransactionKey_mapping.xml</jaxrpc-mapping-file>
+		<service-qname xmlns:pfx="http://ws.transactionkey.utcourts.gov">
+		pfx:TransactionKeyService</service-qname>
+		<port-component-ref>
+			<service-endpoint-interface>gov.utcourts.transactionkey.ws.TransactionKey</service-endpoint-interface>
+		</port-component-ref>
+	</service-ref>
+	<service-ref>
+		<description>
+		WSDL Service ApplicationAuthenticationService</description>
+		<service-ref-name>service/ApplicationAuthenticationService</service-ref-name>
+		<service-interface>gov.utcourts.applicationauthen.ws.ApplicationAuthenticationService</service-interface>
+		<wsdl-file>WEB-INF/wsdl/ApplicationAuthentication.wsdl</wsdl-file>
+		<jaxrpc-mapping-file>WEB-INF/ApplicationAuthentication_mapping.xml</jaxrpc-mapping-file>
+		<service-qname xmlns:pfx="http://ws.applicationauthen.utcourts.gov">
+		pfx:ApplicationAuthenticationService</service-qname>
+		<port-component-ref>
+			<service-endpoint-interface>gov.utcourts.applicationauthen.ws.ApplicationAuthentication</service-endpoint-interface>
+		</port-component-ref>
+	</service-ref>
+	<servlet>
+		<description>This is the log4J init servlet</description>
+		<display-name>LogInitServlet</display-name>
+		<servlet-name>LogInitServlet</servlet-name>
+		<servlet-class>gov.utcourts.corisweb.servlet.LogInitServlet</servlet-class>
+		<init-param>
+			<param-name>log4j.init.file</param-name>
+			<param-value>logging</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+</web-app>

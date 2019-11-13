@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscext:WsClientExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscext="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscext.xmi" xmi:id="WsClientExtension_1537827602508">
+  <serviceRefs xmi:id="ServiceRef_1537827602508" serviceRefLink="service/TransactionKeyService">
+    <portQnameBindings xmi:id="PortQnameBinding_1537827602508" portQnameLocalNameLink="TransactionKey">
+      <clientServiceConfig xmi:id="ClientServiceConfig_1537827748833">
+        <securityRequestGeneratorServiceConfig xmi:id="SecurityRequestGeneratorServiceConfig_1537827748833">
+          <securityToken xmi:id="SecurityToken_1537827748833" name="transactionkeyext" uri="" localName="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken"/>
+        </securityRequestGeneratorServiceConfig>
+      </clientServiceConfig>
+    </portQnameBindings>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1542307382755" serviceRefLink="service/ApplicationAuthenticationService">
+    <portQnameBindings xmi:id="PortQnameBinding_1542307382755" portQnameLocalNameLink="ApplicationAuthentication">
+      <clientServiceConfig xmi:id="ClientServiceConfig_1542315755268">
+        <securityRequestGeneratorServiceConfig xmi:id="SecurityRequestGeneratorServiceConfig_1542315755268">
+          <securityToken xmi:id="SecurityToken_1542315755268" name="applicationAuthenToken" uri="" localName="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken"/>
+        </securityRequestGeneratorServiceConfig>
+      </clientServiceConfig>
+    </portQnameBindings>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscext:WsClientExtension>

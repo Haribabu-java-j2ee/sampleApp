@@ -1,0 +1,186 @@
+{
+	"menuLeft":	[
+		{
+			"text": "Case Summary Search",
+			"url": "/CorisWEB/jsp/caseSummarySearchLookup.jsp",
+			"type": "open=modeless&width=1600&height=800&title=Case Summary Search&style=PRIMARY",
+			"subs": []
+		},
+		{
+			"text": "OSDC Search",
+			"url": "/CorisWEB/OsdcEligibleLookupServlet?source=web",
+			"type": "open=modeless&width=1600&height=800&title=OSDC Search&style=PRIMARY",
+			"subs": []
+		},
+		{
+			"text": "Problem Solving Courts",
+			"url": "/CorisWEB/PSCReferralsServlet?intCaseNum=10896453&courtType=D&meId=10",
+			"type": "open=modeless&width=1600&height=800&title=Problem Solving Courts&style=PRIMARY",
+			"subs": []
+		},
+		{
+			"text": "Admin",
+			"url": "javascript:void(0);",
+			"type": "",
+			"subs": [
+				{
+					"text": "Page Registry",
+					"url": "javascript:void(0);",
+					"type": "",
+					"subs": [
+						{
+							"text": "Define Access Levels",
+							"url": "javascript:showAccessLevels('D')",
+							"type": "",
+							"subs": []
+						},
+						{
+							"text": "Define Pages",
+							"url": "javascript:showPages('D')",
+							"type": "",
+							"subs": []
+						},
+						{
+							"text": "Define Roles",
+							"url": "javascript:showRoles('D')",
+							"type": "",
+							"subs": []
+						},
+						{
+							"text": "Define System Areas",
+							"url": "javascript:showSystemAreas('D')",
+							"type": "",
+							"subs": []
+						},
+						{
+							"text": "Define Court Profiles",
+							"url": "javascript:showProfiles('D')",
+							"type": "",
+							"subs": []
+						}
+					]
+				},
+				{
+					"text": "Problem Solving",
+					"url": "javascript:void(0);",
+					"type": "",
+					"subs": [
+						{
+							"text": "Action Definitions",
+							"url": "/CorisWEB/PSCMaintenanceActionDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Appearance Definitions",
+							"url": "/CorisWEB/PSCMaintenanceAppearanceDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Evaluation Definitions",
+							"url": "/CorisWEB/PSCMaintenanceEvaluationDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Goal Definitions",
+							"url": "/CorisWEB/PSCMaintenanceGoalDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Phase Definitions",
+							"url": "/CorisWEB/PSCMaintenancePhaseDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Incentive Definitions",
+							"url": "/CorisWEB/PSCMaintenanceRewardDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Sanction Definitions",
+							"url": "/CorisWEB/PSCMaintenanceSanctionDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Status Definitions",
+							"url": "/CorisWEB/PSCMaintenanceStatusDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Termination Definitions",
+							"url": "/CorisWEB/PSCMaintenanceTerminationDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Treatment Definitions",
+							"url": "/CorisWEB/PSCMaintenanceTreatmentDefnServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Action - Court Cross Reference",
+							"url": "/CorisWEB/PSCMaintenanceXrefActionCourtServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Court - Location Cross Reference",
+							"url": "/CorisWEB/PSCMaintenanceXrefCourtLocationRedoServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Incentive - Court Cross Reference",
+							"url": "/CorisWEB/PSCMaintenanceXrefRewardCourtServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Sanction - Court Cross Reference",
+							"url": "/CorisWEB/PSCMaintenanceXrefSanctionCourtServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						},
+						{
+							"text": "Status - Action Cross Reference",
+							"url": "/CorisWEB/PSCMaintenanceXrefStatusActionServlet",
+							"type": "open=modeless&width=800&height=600&title=Problem Solving&style=PRIMARY",
+							"subs": []
+						}
+					]
+					
+					
+					
+				}
+			]
+		}
+	],
+	"menuRight": [
+		{
+			"text": "My Profile",
+			"url": "/CorisWEB/html/dummy.html",
+			"type": "open=modal&width=1200&height=600&title=My Profile&style=PRIMARY",
+			"subs": []
+		},
+		{
+			"text": "Notifications",
+			"url": "/CorisWEB/html/holder.html",
+			"type": "open=modeless&width=800&height=400&title=Notifications&style=SECONDARY",
+			"subs": []
+		},
+		{
+			"text": "Logout",
+			"url": "/CorisWEB/LogoutServlet",
+			"type": "",
+			"subs": []
+		}
+	]
+}

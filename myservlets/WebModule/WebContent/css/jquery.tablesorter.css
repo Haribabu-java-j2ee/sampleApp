@@ -1,0 +1,59 @@
+.tablesorter-default .tablesorter-header.tablesorter-headerUnSorted:not(.sorter-false),
+.tablesorter-default .headerSortUp,
+.tablesorter-default .tablesorter-headerSortUp,
+.tablesorter-default .tablesorter-headerAsc,
+.tablesorter-default .headerSortDown,
+.tablesorter-default .tablesorter-headerSortDown,
+.tablesorter-default .tablesorter-headerDesc {
+	cursor: pointer;
+	padding-right: 21px;
+}
+
+.tablesorter-header:active,
+.tablesorter-header:focus {
+	outline: #FFFFFF 0px solid;
+	border: #FFFFFF 0px solid;
+}
+
+.tablesorter-default .tablesorter-header.tablesorter-headerUnSorted:not(.sorter-false) .tablesorter-header-inner::after {
+	content: url(data:image/gif;base64,R0lGODlhFQAJAIAAAM/b48/b4yH5BAEKAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	width: 0;
+	height: 0;
+	margin-right: -21px;
+}
+
+.tablesorter-default .headerSortUp,
+.tablesorter-default .tablesorter-headerSortUp,
+.tablesorter-default .tablesorter-headerAsc,
+.tablesorter-default .headerSortDown,
+.tablesorter-default .tablesorter-headerSortDown,
+.tablesorter-default .tablesorter-headerDesc {
+	border-bottom: #FFFFFF 2px solid;
+	color: #FFFFFF;
+}
+
+.tablesorter-default .headerSortUp .tablesorter-header-inner::after,
+.tablesorter-default .tablesorter-headerSortUp .tablesorter-header-inner::after,
+.tablesorter-default .tablesorter-headerAsc .tablesorter-header-inner::after {
+	content: url(data:image/gif;base64,R0lGODlhFQAEAIABAP///8/b4yH5BAEKAAEALAAAAAAVAAQAAAINjI+AywnaYnhUMopbAQA7);
+	position: relative;
+	top: -2px;
+	width: 0;
+	height: 0;
+	margin-right: -21px;
+}
+
+.tablesorter-default .headerSortDown .tablesorter-header-inner::after,
+.tablesorter-default .tablesorter-headerSortDown .tablesorter-header-inner::after,
+.tablesorter-default .tablesorter-headerDesc .tablesorter-header-inner::after {
+	content: url(data:image/gif;base64,R0lGODlhFQAEAIABAP///8/b4yH5BAEKAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	position: relative;
+	top: -2px;
+	width: 0;
+	height: 0;
+	margin-right: -21px;
+}
+
+.tablesorter .filtered {
+	display: none;
+}

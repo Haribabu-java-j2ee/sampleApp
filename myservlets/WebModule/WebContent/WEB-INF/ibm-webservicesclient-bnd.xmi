@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscbnd:ClientBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscbnd="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscbnd.xmi" xmi:id="ClientBinding_1537827602500">
+  <serviceRefs xmi:id="ServiceRef_1537827602500" serviceRefLink="service/TransactionKeyService">
+    <portQnameBindings xmi:id="PortQnameBinding_1537827602501" portQnameLocalNameLink="TransactionKey">
+      <securityRequestGeneratorBindingConfig xmi:id="SecurityRequestGeneratorBindingConfig_1537827785878">
+        <tokenGenerator xmi:id="TokenGenerator_1537909305606" name="transactionkeybinding" classname="com.ibm.wsspi.wssecurity.token.UsernameTokenGenerator">
+          <valueType xmi:id="ValueType_1537909305606" localName="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" uri="" name="Username Token"/>
+          <callbackHandler xmi:id="CallbackHandler_1537909305606" classname="com.ibm.wsspi.wssecurity.auth.callback.NonPromptCallbackHandler">
+            <basicAuth xmi:id="BasicAuth_1537909305606" userid="randomKeyId" password="{xor}GGwrMm40fjoGOR8NMmw="/>
+          </callbackHandler>
+          <partReference xmi:id="PartReference_1537909305606" part="transactionkeyext"/>
+        </tokenGenerator>
+      </securityRequestGeneratorBindingConfig>
+    </portQnameBindings>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1542307382724" serviceRefLink="service/ApplicationAuthenticationService">
+    <portQnameBindings xmi:id="PortQnameBinding_1542307382724" portQnameLocalNameLink="ApplicationAuthentication">
+      <securityRequestGeneratorBindingConfig xmi:id="SecurityRequestGeneratorBindingConfig_1542315755221">
+        <tokenGenerator xmi:id="TokenGenerator_1542315755221" name="applicationAuthenBinding" classname="com.ibm.wsspi.wssecurity.token.UsernameTokenGenerator">
+          <valueType xmi:id="ValueType_1542315755221" localName="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken" uri="" name="Username Token"/>
+          <callbackHandler xmi:id="CallbackHandler_1542315755221" classname="com.ibm.wsspi.wssecurity.auth.callback.NonPromptCallbackHandler">
+            <basicAuth xmi:id="BasicAuth_1542315755221" userid="appAuthId" password="{xor}ZzJuHilnbjYbaiYs"/>
+          </callbackHandler>
+          <partReference xmi:id="PartReference_1542315755221" part="applicationAuthenToken"/>
+        </tokenGenerator>
+      </securityRequestGeneratorBindingConfig>
+    </portQnameBindings>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscbnd:ClientBinding>

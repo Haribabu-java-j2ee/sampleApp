@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://ws.transactionkey.utcourts.gov" xmlns:impl="http://ws.transactionkey.utcourts.gov" xmlns:intf="http://ws.transactionkey.utcourts.gov" xmlns:tns2="http://transactionkey.utcourts.gov" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.transactionkey.utcourts.gov">
+   <import namespace="http://transactionkey.utcourts.gov"/>
+   <element name="generateKeyResponse">
+    <complexType>
+     <sequence>
+      <element name="generateKeyReturn" nillable="true" type="tns2:ReturnCode"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="generateKey">
+    <complexType>
+     <sequence>
+      <element name="requestedSystem" nillable="true" type="xsd:string"/>
+      <element name="callingSystem" nillable="true" type="xsd:string"/>
+      <element name="key" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://transactionkey.utcourts.gov">
+   <complexType name="ReturnCode">
+    <sequence>
+     <element name="reason" nillable="true" type="xsd:string"/>
+     <element name="reasonCode" nillable="true" type="xsd:string"/>
+     <element name="transactionKey" nillable="true" type="xsd:string"/>
+     <element name="transactionId" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="generateKeyRequest">
+     <wsdl:part element="intf:generateKey" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:message name="generateKeyResponse">
+     <wsdl:part element="intf:generateKeyResponse" name="parameters"/>
+
+  </wsdl:message>
+
+   <wsdl:portType name="TransactionKey">
+     <wsdl:operation name="generateKey">
+       <wsdl:input message="intf:generateKeyRequest" name="generateKeyRequest"/>
+
+       <wsdl:output message="intf:generateKeyResponse" name="generateKeyResponse"/>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="TransactionKeySoapBinding" type="intf:TransactionKey">
+ <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsdl:required="false"/>
+
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="generateKey">
+       <wsdlsoap:operation soapAction="generateKey"/>
+
+       <wsdl:input name="generateKeyRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="generateKeyResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="TransactionKeyService">
+     <wsdl:port binding="intf:TransactionKeySoapBinding" name="TransactionKey">
+       <wsdlsoap:address location="https://localhost:9443/TransactionKeyWS/services/TransactionKey"/>
+
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>

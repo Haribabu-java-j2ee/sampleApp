@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.ibm.ws.ast.st.runtime.runtimeTarget.v90/was.base.v9">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/WebSphere Application Server traditional V9.0 JRE">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path=".apt_generated">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CorisCommon"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/axis-1.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-net-2.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ganymed-ssh2-build210.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/itextpdf-5.1.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j-1.2.7.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/NotificationsCommon"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xml.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PersonCentralCommon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/DmzerCommon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/DocMgrCommonNew"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ProblemSolvingCommon"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-3.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-ooxml-3.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-ooxml-schemas-3.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-fileupload-1.3.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-io-2.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonAuth"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CareCommon"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/aoc_courtscommonV2.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PersonnelCommon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CorisInterface"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/aoc_corisPowerBuilderWS.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EflexCommon"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>
