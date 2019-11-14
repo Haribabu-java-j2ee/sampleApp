@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<PROPERTY>
+	<max_results>100</max_results>
+	<max_results_message>Too many results have been returned. Please narrow your search.</max_results_message>
+	<no_results_message>No results found.</no_results_message>
+	
+	<mail>
+		<file>
+			<limit>20000000</limit>
+			<extensions>DOC, PDF, WPD, TXT, HTML, XML, GIF, TIF, TIFF, JPG, BMP, RTF, XLS, DOCX, XLSX</extensions>
+		</file>
+	</mail>
+
+	<data_sources>	
+	    <common_ds>
+	    	<datasource>jdbc/commonDB</datasource>
+	    	<JDBCURL>jdbc:informix-sqli://test-slc-apps-ifmx01:1524/commondb:INFORMIXSERVER=ucjis_tst</JDBCURL>
+			<username>xxxxx</username>
+			<password>xxxxx</password>
+	    </common_ds>
+	    <system31>
+	    	<system>CORIS</system>
+	    	<systemType>CORIS</systemType>
+	    	<courtD>   
+	    		<JDBCURL>jdbc:informix-sqli://test-slc-dist-ifmx01:1524/coris:INFORMIXSERVER=jctst_coris</JDBCURL>
+				<username>xxxxx</username>
+				<password>xxxxx</password>
+			</courtD>
+	    	<courtJ>   
+	    		<JDBCURL>jdbc:informix-sqli://test-slc-just-ifmx01:1524/coris:INFORMIXSERVER=jctst2_coris</JDBCURL>
+				<username>xxxxx</username>
+				<password>xxxxx</password>
+			</courtJ>
+	    </system31>
+	    <system25>
+	    	<system>Jury</system>
+	    	<systemType>jury</systemType>   
+	    	<JDBCURL>xxxxx</JDBCURL>
+			<username>xxxxx</username>
+			<password>xxxxx</password>
+	    </system25>
+	    <system17>
+	    	<system>My Workspace</system>
+	    	<systemType>rimrequest</systemType>
+	    </system17>
+		<system29>
+			<system>Online Dispute Resolution</system>
+			<systemType>odr</systemType>
+			<JDBCURL>jdbc:informix-sqli://test-slc-apps-ifmx01:1524/odr:INFORMIXSERVER=ucjis_tst</JDBCURL>
+			<username>xxxxx</username>
+			<password>xxxxx</password>
+		</system29>
+		<system30>
+			<system>My Case</system>
+			<systemType>mycase</systemType>
+			<JDBCURL>jdbc:informix-sqli://test-slc-apps-ifmx01:1524/mycase:INFORMIXSERVER=ucjis_tst</JDBCURL>
+			<username>xxxxx</username>
+			<password>xxxxx</password>
+		</system30>
+	</data_sources>
+	
+	<applicationauth_ws>
+		<requested_system>Notifications</requested_system>
+		<notifications_key>F7@3uB9L!64rV2@uYg3!Hn2!44@pQ2</notifications_key>
+		<endpoint>https://dev-slc-apps-ws01.utahcourts.local:9443/CourtsSecureListenerNoHttp/soaphttpengine/devbus/ApplicationAuthenWSInboundService/inPort</endpoint>
+	</applicationauth_ws>
+
+	<email_ws>
+		<endpoint>https://dev-slc-apps-ws01.utahcourts.local:9443/CourtsSecureListenerNoHttp/soaphttpengine/devbus/EmailWSInboundService/inPort</endpoint>
+	   	<senderemail>notifications@utcourts.gov</senderemail>
+	   	<calling_system>ais</calling_system>
+	   	<security_cert_system>xxxxx</security_cert_system>
+		<security_cert_test_password>xxxxx</security_cert_test_password>
+		<security_cert_prod_password>xxxxx</security_cert_prod_password>
+	</email_ws>
+	
+	<commonemailverify>
+		<web_url>http://localhost:9080/CommonEmailVerifyWEB/EmailVerify</web_url>
+		<helpdesk_email>helpdesk@utcourts.gov</helpdesk_email>
+	</commonemailverify>
+		
+	<notifications>
+		<system_version>123</system_version>
+		<maximum_number_of_attempts>3</maximum_number_of_attempts>
+	</notifications>
+	
+	<sms_verification>
+		<url>https://api.data24-7.com/v/2.0</url>
+		<user>utcourts</user>
+		<password>sms123</password>
+	</sms_verification>
+	
+	<web_context>
+		<notifications>https://devws.utcourts.gov/NotificationsWEB</notifications>
+	</web_context>
+	
+	<transactionkey_ws>
+		<endpoint>https://dev-slc-apps-ws01.utahcourts.local:9443/CourtsSecureListenerNoHttp/soaphttpengine/devbus/TransactionKeyWSInboundService/inPort</endpoint>
+	</transactionkey_ws>
+	<excluded_systems>
+		<noticestatus_update>17,18</noticestatus_update>
+	</excluded_systems>
+</PROPERTY>
